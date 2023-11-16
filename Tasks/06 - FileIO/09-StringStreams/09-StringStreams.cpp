@@ -21,7 +21,27 @@ int main()
 
     //Read first word (words are separated by spaces or newlines)
     istringstream iss(sentence);
-    iss >> nextWord;
+    int count = 0;
+
+    while (!iss.eof())
+    {
+        iss >> nextWord;
+
+        if (!iss.fail())
+        {
+            continue;
+        }
+
+        count++;
+    
+        cout << nextWord << endl;
+
+        if (nextWord == "Always.")
+        {
+            cout << endl;
+        }
+    
+    }
 
     //Was a word actually read?
     if (iss.fail()) {

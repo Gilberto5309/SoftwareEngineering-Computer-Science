@@ -5,13 +5,27 @@ using namespace std;
 
 int main()
 {
+	
+	ofstream file;
+
+	file.open("tables.txt");
+	
+	if (!file.is_open())
+	{
+		cerr << "No file could be created" << endl;
+		return -1;
+	}
+
 	for (unsigned int r = 2; r <= 12; r++) {
 		for (unsigned int c = 2; c <= 12; c++) {
-			cout << r * c << "\t";
+			file << r * c << "\t";
 		}
-		cout << endl;
+		file << endl;
 	}
-	cout << endl;
+	file << endl;
+
+
+	file.close();
 
 	return 0;
 }

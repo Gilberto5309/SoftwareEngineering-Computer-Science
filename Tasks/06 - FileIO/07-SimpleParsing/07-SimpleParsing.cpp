@@ -44,6 +44,7 @@ int main()
 
     //TO DO: 
     // Now find the module ID number
+    inputStream >> code;
     // Store it in the integer variable code
     // Calculate the next value (code + 1)
     // Write out the new module string (correct answer is COMP1001).
